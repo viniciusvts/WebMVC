@@ -9,6 +9,7 @@ namespace WebMVC.Models
     public class Context : DbContext
     {
         public DbSet<Categoria> Categorias { get; set; }
+        public DbSet<Produto> Produtos { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseMySQL("server=localhost;database=webmvc;user=root;password=root");
